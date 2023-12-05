@@ -129,7 +129,7 @@ nav ul li a {
     display: flex;
     align-items: center;
     flex-direction: column;
-    width: 1500px;
+    width: 75%;
     height: auto;
     border-radius: 5px;
     background-color: antiquewhite;
