@@ -478,4 +478,16 @@
             </footer>
         </div>
     </body>
+    
+    <script>const images = document.querySelectorAll("img");
+        function loadImage() {
+        images.forEach(img => {
+        const src = img.getAttribute("data-src");
+        if (!src) return;
+        img.setAttribute("src", src);
+        img.removeAttribute("data-src");
+        });
+        }
+        window.addEventListener("load", loadImage);
+        </script>
 </html>
