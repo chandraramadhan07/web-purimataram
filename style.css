@@ -10,11 +10,8 @@ body {
 }
 
 .container {
-    display: flex;
     width: 100%;
     height: auto;
-    flex-direction: column;
-    position: relative;
 }
 
 nav {
@@ -24,14 +21,14 @@ nav {
     justify-content: center;
     align-items: center;
     padding: 30px;
-    position:fixed;
+    position: fixed;
     width: 100%;
     z-index: 999;
     top: 0;
     opacity: 0.7;
 }
 
-nav li {
+nav ul li {
     display: inline-block;
     list-style: none;
     padding: 0 60px;
@@ -51,26 +48,22 @@ nav ul li a {
     align-items: center;
     width: 100%;
     height: 100vh;
-    background-image: url('./img/depan.jpg');
+    background-image: linear-gradient(to left, rgba(0, 0, 0, 0) 0, rgba(0, 0, 0, 0.623) 70%), url('./img/depan.jpg');
     background-size: cover;
-
 }
-
-
 
 .home-content {
    width: 100%;
-
 }
 
 .text-content {
     display: flex;
     flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
     width: 40%;
     height: 100vh;
     position: relative;
-    justify-content: center;
-    align-items: flex-start;
     left: 100px;
     color: white;
 }
@@ -91,37 +84,33 @@ nav ul li a {
 }
 
 .desc {
-
-
     height: 50%;
-}
-
-.desc p {
     font-size: 1.3rem;
-
 }
+
 
 .about {
     width: 100%;
     height: auto;
     padding-bottom: 150px;
-    background-color: rgb(68, 43, 43);
+    background: white;
     display: flex;
     align-items: center;
     flex-direction: column;
+    min-height: 100vh;
 }
 
 .about-header {
     text-align: center;
     margin-top: 100px;
-    color: white;
+    color: #aa7229;
     width: 250px;
     padding-bottom: 40px;
 }
 
 .about-header h1 {
-    border-bottom: 2.5px solid white;
-    font-weight: lighter;
+    border-bottom: 2.5px solid #aa7229;
+    font-weight: bolder;
     font-size: 2.5rem;
 }
 
@@ -132,71 +121,14 @@ nav ul li a {
     width: 1500px;
     height: auto;
     border-radius: 5px;
-    background-color: antiquewhite;
+    background-color: #fdfaf0;
     padding: 30px 0 0 0;
+    border: 2px solid #d48c2d;
 }
 
 .about-content p {
     padding: 70px 50px 20px;
     font-size: 1.2rem;
-}
-
-footer {
-    display: flex;
-    flex-direction: column;
-    height: auto;
-    background-color: #332020;
-    align-items: center;
-}
-
-.footer-header {
-    text-align: center;
-    margin-top: 20px;
-    color: white;
-    width: 17%;
-    padding-bottom: 40px;
-}
-
-.footer-header h1 {
-    border-bottom: 2.3px solid white;
-    font-weight: lighter;
-    font-size: 3rem;
-}
-
-
-.footer-content {
-    display: flex;
-    height: auto;
-    align-self: flex-start;
-    width: 100%;
-}
-
-.sosmed {
-    width: 50%;
-
-    
-    
-    padding: 0 0 20px 30px;
-}
-
-.sosmed p{
-    font-size: 2rem;
-    font-weight: lighter;
-    color: white;
-}
-
-.telp {
-    width: 50%;
-    display: flex;
-    justify-content: flex-end;
-    align-items: flex-end;
-    padding: 0 30px 20px 0;
-}
-
-.telp p {
-    color: white;
-    font-size: 2rem;
-    font-weight: lighter;
 }
 
 
@@ -207,13 +139,7 @@ footer {
     justify-content: center;
     width: 100%;
     height: 100vh;
-    background-color: rgb(12, 12, 26);
-}
-
-.maps {
-    display: flex;
-    width: 70%;
-    position: relative;
+    background: linear-gradient(to bottom,#001f18, #05503a, #199b6b);
 }
 
 .maps-txt {
@@ -224,23 +150,39 @@ footer {
 
 }
 
-.maps-content .maps img{
-    width: 100%;
-}
-
-.maps-content .maps-txt h1{
+.maps-txt h1{
     font-weight:bolder;
     font-size: 3rem;
     border-bottom: 3px solid white;
 }
 
-.pin-parkir-container {             /* Style Maps Parkiran*/
+.maps {
+    display: flex;
+    width: 70%;
+    position: relative;
+}
+
+.maps img{
+    width: 100%;
+}
+
+.pin-parkir-container,
+.pin-embung-container,
+.pin-pasar-container,
+.pin-kelinci-container,
+.pin-merino-container,
+.pin-kaktus-container,
+.pin-rusa-container,
+.pin-bunga-container,
+.pin-unggas-container {             
     display: flex;
     align-items: center;
     position: absolute;
     color: white;
     width: 15%;
+}
 
+.pin-parkir-container{      /* Posisi Pin Maps Parkiran*/
     left: 26.2%;
     top: 31.9%;
 }
@@ -254,13 +196,7 @@ footer {
     font-weight: bolder;
 }
 
-.pin-embung-container {         /* Style Maps Embung Kembangan */
-    display: flex;
-    align-items: center;
-    position: absolute;
-    color: white;
-    width: 15%;
-    
+.pin-embung-container {         /* Posisi Pin Maps Embung Kembangan */
     left: 42%;
     top: 46%;
 }
@@ -274,13 +210,7 @@ footer {
     font-weight: bolder;
 }
 
-.pin-kelinci-container {         /* Style Maps Taman Kelinci */
-    display: flex;
-    align-items: center;
-    position: absolute;
-    color: white;
-    width: 15%;
-    
+.pin-kelinci-container {         /* Posisi Pin Taman Kelinci */
     left: 67.36%;
     top: 56%;
 }
@@ -294,13 +224,7 @@ footer {
     font-weight: bolder;
 }
 
-.pin-merino-container {         /* Style Maps Kandang Merino */
-    display: flex;
-    align-items: center;
-    position: absolute;
-    color: white;
-    width: 15%;
-    
+.pin-merino-container {         /* Posisi Pin Kandang Merino */
     left: 75.3%;
     top: 65%;
 }
@@ -315,13 +239,7 @@ footer {
     font-weight: bolder;
 }
 
-.pin-bunga-container {         /* Style Maps Taman Bunga */
-    display: flex;
-    align-items: center;
-    position: absolute;
-    color: white;
-    width: 15%;
-    
+.pin-bunga-container {         /* Posisi Pin Taman Bunga */
     left: 76.6%;
     top: 12%;
 }
@@ -335,13 +253,7 @@ footer {
     font-weight: bolder;
 }
 
-.pin-rusa-container {         /* Style Maps Kandang Rusa */
-    display: flex;
-    align-items: center;
-    position: absolute;
-    color: white;
-    width: 19%;
-    
+.pin-rusa-container {         /* Posisi Pin Kandang Rusa */
     left: 79.7%;
     top: 28.9%;
 }
@@ -356,13 +268,7 @@ footer {
     font-weight: bolder;
 }
 
-.pin-unggas-container {         /* Style Maps Kandang Rusa */
-    display: flex;
-    align-items: center;
-    position: absolute;
-    color: white;
-    width: 15%;
-    
+.pin-unggas-container {         /* Posisi Pin Kandang Rusa */
     left: 59%;
     top: 13%;
 }
@@ -377,13 +283,7 @@ footer {
     font-weight: bolder;
 }
 
-.pin-pasar-container {         /* Style Maps PASAR NDELIK */
-    display: flex;
-    align-items: center;
-    position: absolute;
-    color: white;
-    width: 15%;
-    
+.pin-pasar-container {         /* Posisi Pin PASAR NDELIK */
     left: 50%;
     top: 30%;
 }
@@ -398,13 +298,7 @@ footer {
     font-weight: bolder;
 }
 
-.pin-kaktus-container {         /* Style Maps TAMAN KAKTUS */
-    display: flex;
-    align-items: center;
-    position: absolute;
-    color: white;
-    width: 15%;
-    
+.pin-kaktus-container {         /* Posisi Pin TAMAN KAKTUS */
     left: 70%;
     top: 72%;
 }
@@ -679,26 +573,35 @@ footer {
     height: auto;
     background-color: #332020;
     align-items: center;
+    padding: 20px;
 }
-
-.footer-header {
-    text-align: center;
-    margin-top: 20px;
-    color: white;
-    width: 17%;
-    padding-bottom: 40px;
-}
-
-.footer-header h1 {
-    border-bottom: 2.3px solid white;
-    font-weight: lighter;
-    font-size: 3rem;
-}
-
 
 .footer-content {
     display: flex;
     height: auto;
-    align-self: flex-start;
     width: 100%;
+}
+
+.sosmed {
+    width: 50%;
+}
+
+.sosmed p{
+    font-size: 2rem;
+    font-weight: lighter;
+    color: white;
+}
+
+.telp {
+    width: 50%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+
+}
+
+.telp p {
+    color: white;
+    font-size: 1.5rem;
+    font-weight: lighter;
 }
